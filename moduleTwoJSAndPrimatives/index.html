@@ -11,17 +11,17 @@
 </head>
 <body class="module-two">
   
-  <h1>Basic JS fundementals</h1>
-  <p>This is a basic set of maniplulations that are a daily occurance for most data manipulation tasks in a modern frontend. Please follow the brief and add your approaches to the index.js :)</p>
+  <h1>Basic JS fundamentals</h1>
+  <p>This is a basic set of manipulations that are a daily occurrence for most data manipulation tasks in a modern frontend. Please follow the brief and add your approaches to the index.js :)</p>
   <div class="Buttons">
     <h1>1: Logging Array Manipulation</h1>
     <p>Bellow are six buttons, each of these when clicked should console log the results of a function in the format defined in the button. The base data should never be mutated</p>
-    <button>Log baseData</button>
-    <button>Log baseData in reverse</button>
-    <button>Log baseData without first item</button>
-    <button>Log each baseData entry as a new log</button>
-    <button>Log baseData including the `addOnData` object at the beginning</button>
-    <button>Log baseData replacing the index 2 with the addOnData, updating its ID </button>
+    <button id="button1">Log baseData</button>
+    <button id="button2">Log baseData in reverse</button>
+    <button id="button3">Log baseData without first item</button>
+    <button id="button4">Log each baseData entry as a new log</button>
+    <button id="button5">Log baseData including the `addOnData` object at the beginning</button>
+    <button id="button6">Log baseData replacing the index 2 with the addOnData, updating its ID </button>
   </div>
 
   <div class="Buttons">
@@ -29,20 +29,19 @@
     <p id="stringText">
       the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox the quick brown fox 
     </p>
-    <button>Log the results of a function that counts the occurance of the word `fox` </button>
-    <button>Log the results of a function that reverses every word in place in the paragraph</button>
-    <button>Log the results of a function that replaces the word `brown` with `sandy` and updates the text above</button>
+    <button id="button7">Log the results of a function that counts the occurance of the word `fox` </button>
+    <button id="button8">Log the results of a function that reverses every word in place in the paragraph</button>
+    <button id="button9">Log the results of a function that replaces the word `brown` with `sandy` and updates the text above</button>
   </div>
 
   <div class="Buttons">
     <h1>3: Storage</h1>
     <p>Whatever text that is added to the box below must be stored and maintanted in localstorage. This should persist accross reloads.</p>
     <p>Care must be added to the handling of this in the case that I do not overwrite it, and can edit at any point in the string.</p>
-    <input type="text" placeholder="Some text here" style="width: 100%;">
+    <input value="" id="addToLocalStorage" type="text" placeholder="Some text here" style="width: 100%;">
   </div>
 
 
-
-  <script src="./index.js"></script>
+  <script defer src="./index.js"></script>
 </body>
 </html>
