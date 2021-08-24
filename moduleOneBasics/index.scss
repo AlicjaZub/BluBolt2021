@@ -1,4 +1,93 @@
 // Basics
-.module-one {
 
+$teal: #00D0BB;
+$blue: #0191DE;
+$pink: #F535C1;
+$purple: #9013FE;
+
+$mediaMaxWidth: 1440px;
+$mediaMidWidth: 1024px;
+$mediaMinWidth: 786px;
+
+@mixin button($button: $blue) {
+  background: $button;
+  color: #fff;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 160px;
+  height: 80px;
+  border-radius: 6%;
+  border: none;
+  font-size: 1.6rem;
+}
+
+.module-one {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.product-card {
+  border: black solid 1px;
+  max-width: 380px;
+}
+
+img {
+  max-width: 340px;
+  margin: 20px;
+}
+
+h1, h2, h3 {
+  margin-left: 20px;
+  margin-bottom: 2%;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: $teal;
+}
+
+h3 {
+  color: $teal;
+  letter-spacing: 0.15rem;
+  font-size: 1.4rem;
+}
+
+.buy-button {
+  @include button;
+}
+
+.more-button {
+  @include button($button: $pink);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 720px 720px 720px 720px;
+  column-gap: 10px;
+  row-gap: 20px;
+  justify-items: center;
+}
+
+@media (min-width: $mediaMidWidth) and (max-width: $mediaMaxWidth) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: $mediaMinWidth) and (max-width: $mediaMidWidth) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: $mediaMinWidth) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
