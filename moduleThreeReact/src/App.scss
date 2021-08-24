@@ -1,0 +1,33 @@
+
+.App {
+  background-color: #f1f1f1;
+  padding: 20px;
+  .buttonGroup {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    button {
+      padding: 8px;
+      border: 1px solid #ccc;
+      margin: 5px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      &:hover {
+        background-color: #333;
+        color: #fff;
+      }
+      &.active {
+        background-color: #333;
+        color: #fff;
+      }
+    }
+
+  }
+}
+
+.ProductList {
+  background-color: #fff;
+  min-height: 20vh;
+  padding: 10px;
+}

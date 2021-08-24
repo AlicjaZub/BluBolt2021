@@ -1,0 +1,34 @@
+{
+  "name": "code-tests-2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve:1": "live-server moduleOneBasics/",
+    "compile:1": "node-sass -rw moduleOneBasics/index.scss -o moduleOneBasics",
+    "dev:1":"npm-run-all -p serve:1 compile:1",
+    "serve:2": "live-server moduleTwoJSAndPrimatives/",
+    "compile:2": "node-sass -rw moduleTwoJSAndPrimatives/index.scss -o moduleTwoJSAndPrimatives",
+    "dev:2":"npm-run-all -p serve:2 compile:2",
+    
+    "dev:react": "cd moduleThreeReact/  && yarn start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leighs-hammer/code-evaluation-problem-solving.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leighs-hammer/code-evaluation-problem-solving/issues"
+  },
+  "homepage": "https://github.com/leighs-hammer/code-evaluation-problem-solving#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "scss-compile": "^0.1.7",
+    "serve": "^11.3.0"
+  }
+}
