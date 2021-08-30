@@ -1,14 +1,14 @@
 import React, { Component }  from 'react';
 import Button from "../Button";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 const ItemContainer = (props) => {
 
     return (
-        <div class='container'>
+        <div className='container'>
         {props.products.map((product, index) => {
                 return (
-                    <div class="productContainer" key={index}>
+                    <div className="productContainer" key={index}>
                         <img src={product.node.images.edges[0].node.src}/>
                         <h3>{product.node.vendor}</h3>
                         <h1> {product.node.title}</h1>

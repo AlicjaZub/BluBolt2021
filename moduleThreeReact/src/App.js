@@ -96,7 +96,6 @@ const App = () =>  {
         {/* 
           Your render components go here
         */}
-
           <ItemContainer products={products}/>
       </main>
     </div>
