@@ -1,7 +1,7 @@
-
 .App {
   background-color: #f1f1f1;
   padding: 20px;
+  box-sizing: border-box;
   .buttonGroup {
     display: flex;
     justify-content: center;
@@ -22,20 +22,8 @@
         color: #fff;
       }
     }
-
   }
 }
-
-.ProductList {
-  background-color: #fff;
-  min-height: 20vh;
-  padding: 10px;
-  margin: 0;
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-// Basics
 
 $teal: #00D0BB;
 $blue: #0191DE;
@@ -51,15 +39,26 @@ $mediaMinWidth: 786px;
   color: #fff;
   margin-left: 20px;
   margin-top: 20px;
-  width: 160px;
+  width: 170px;
   height: 80px;
   border-radius: 6%;
   border: none;
   font-size: 1.6rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  &.active {
+    background-color: #333;
+    color: #fff;
+  }
 }
 
 img {
-  max-width: 340px;
+  max-width: 100%;
+  max-height: 100%;
   margin: 20px;
 }
 
@@ -98,22 +97,40 @@ h3 {
   column-gap: 10px;
   row-gap: 20px;
   justify-items: center;
+  background-color: #fff;
+  font-size: 62.5%;
 }
 
-//@media (min-width: $mediaMidWidth) and (max-width: $mediaMaxWidth) {
-//  .container {
-//    grid-template-columns: 1fr 1fr 1fr 1fr;
-//  }
-//}
-//
-//@media (min-width: $mediaMinWidth) and (max-width: $mediaMidWidth) {
-//  .container {
-//    grid-template-columns: 1fr 1fr 1fr;
-//  }
-//}
-//
-//@media (max-width: $mediaMinWidth) {
-//  .container {
-//    grid-template-columns: 1fr 1fr;
-//  }
-//}
+.productContainer {
+  max-width: 400px;
+}
+
+@media (min-width: $mediaMidWidth) and (max-width: $mediaMaxWidth) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .buy-button, .more-button {
+    width: 110px;
+  }
+}
+
+@media (min-width: $mediaMinWidth) and (max-width: $mediaMidWidth) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .buy-button, .more-button {
+    width: 95px;
+  }
+}
+
+@media (max-width: $mediaMinWidth) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .buy-button, .more-button {
+    width: 80px;
+  }
+}

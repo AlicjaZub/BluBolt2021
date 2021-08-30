@@ -29,7 +29,6 @@ const App = () =>  {
     let dataCopy = [...data] // copy data to stop mutating reacts state
     dataCopy.sort((a, b) =>
         a.node.priceRange.maxVariantPrice.amount < b.node.priceRange.maxVariantPrice.amount && 1 || -1)
-    // console.log(data)
     return dataCopy
   }
 
@@ -97,10 +96,8 @@ const App = () =>  {
         {/* 
           Your render components go here
         */}
-        
-        <div className="ProductList">
+
           <ItemContainer products={products}/>
-        </div>
       </main>
     </div>
   )
